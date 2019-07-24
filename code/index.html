@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学习浏览器事件机制</title>
+    <style>
+        .btn {
+            width: 150px;
+            height: 50px;
+            line-height: 30px;
+            background: dodgerblue;
+            color: #ffffff;
+            border: 0;
+            font-size: 24px;
+            position: relative;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+<input type="button" class="btn js-btn" value="点我" />
+<script>
+    let btn = document.getElementsByClassName("btn")[0];
+
+    //DOM1级
+
+    // btn.onclick = function () {
+    //     alert("Good morning")
+    // };
+
+    //DOM2级
+    // btn.addEventListener("click",function (e) {
+    //     console.log(e);
+    // });
+
+    // 取消默认事件
+    document.oncontextmenu = function (e) {
+    //     alert("click")
+        console.log(e);
+        e.preventDefault();
+    };
+
+
+    // var handler = function(event){
+    //     switch(event.type){
+    //     case "click":
+    //         alert("Clicked");
+    //         break;
+    //     case "mouseover":
+    //         event.target.style.backgroundColor = "red";
+    //         break;
+    //     case "mouseout":
+    //         event.target.style.backgroundColor = "";
+    //         break;
+    //     }
+    // };
+    // btn.onclick = handler;
+    // btn.onmouseover = handler;
+    // btn.onmouseout = handler;
+
+</script>
+</body>
+</html>
