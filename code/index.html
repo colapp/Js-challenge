@@ -43,7 +43,7 @@
 
 <!--html行内写法-->
 <!--<input type="button" class="btn js-btn" value="点我" onclick="alert('好饿饿饿啊啊啊啊')"/>-->
-<input type="button" class="btn js-btn" id="btn" value="点我" />
+<input type="button" class="btn js-btn" value="点我" />
 
 <!--<div class="a">-->
     <!--<div class="b">-->
@@ -87,7 +87,8 @@
 </script>
 
 <script>
-    let btn = document.getElementsByClassName("js-btn")[0];
+    // let btn = document.getElementsByClassName("js-btn")[0];
+    var btn = document.querySelector(".js-btn");
 
 
     //DOM1级
@@ -100,9 +101,10 @@
     // btn.addEventListener("click",function (e) {
     //     console.log(e);
     // });
-    //
-    // //IE级
-    // btn.attachEvent("onclick", function(){
+
+    // IE级
+    // btn.attachEvent("onclick", function(e){
+    //     console.log(e);
     //     alert("Clicked");
     // });
 
