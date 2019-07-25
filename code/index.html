@@ -39,23 +39,22 @@
     </style>
 </head>
 <body>
+
+
 <!--html行内写法-->
 <!--<input type="button" class="btn js-btn" value="点我" onclick="alert('好饿饿饿啊啊啊啊')"/>-->
-<!--<input type="button" class="btn js-btn" value="点我" />-->
+<input type="button" class="btn js-btn" value="点我" />
 
-<div class="a">
-    <div class="b">
-        <div class="c"></div>
-    </div>
-</div>
+<!--<div class="a">-->
+    <!--<div class="b">-->
+        <!--<div class="c"></div>-->
+    <!--</div>-->
+<!--</div>-->
 
 <script>
-    let btn = document.getElementsByClassName("btn")[0];
-
-
-    let a = document.getElementsByClassName("a")[0];
-    let b = document.getElementsByClassName("b")[0];
-    let c = document.getElementsByClassName("c")[0];
+    // let a = document.getElementsByClassName("a")[0];
+    // let b = document.getElementsByClassName("b")[0];
+    // let c = document.getElementsByClassName("c")[0];
 
     // a.onclick = function() {
     //     console.log("爷爷不说话")
@@ -67,34 +66,42 @@
     //     console.log("儿子不说话")
     // };
 
-    a.addEventListener("click",function () {
-        console.log("爷爷不说话")
-    });
-    b.addEventListener("click",function () {
-        console.log("爸爸不说话")
-    });
-    c.addEventListener("click",function () {
-        console.log("儿子不说话")
-    });
-    a.addEventListener("click",function () {
-        console.log("爷爷不说话")
-    },true);
-    b.addEventListener("click",function () {
-        console.log("爸爸不说话")
-    },true);
-    c.addEventListener("click",function () {
-        console.log("儿子不说话")
-    },true)
+    // a.addEventListener("click",function () {
+    //     console.log("爷爷不说话")
+    // });
+    // b.addEventListener("click",function () {
+    //     console.log("爸爸不说话")
+    // });
+    // c.addEventListener("click",function () {
+    //     console.log("儿子不说话")
+    // });
+    // a.addEventListener("click",function () {
+    //     console.log("爷爷不说话")
+    // },true);
+    // b.addEventListener("click",function () {
+    //     console.log("爸爸不说话")
+    // },true);
+    // c.addEventListener("click",function () {
+    //     console.log("儿子不说话")
+    // },true)
+</script>
+<script>
+    let btn = document.getElementsByClassName("btn")[0];
 
     //DOM1级
+    btn.onclick = function (e) {
+        // alert("Good morning")
+        console.log(e);
+    };
 
-    // btn.onclick = function () {
-    //     alert("Good morning")
-    // };
-
-    //DOM2级
+    // //DOM2级
     // btn.addEventListener("click",function (e) {
     //     console.log(e);
+    // });
+    //
+    // //IE级
+    // btn.attachEvent("onclick", function(){
+    //     alert("Clicked");
     // });
 
     // 取消默认事件
