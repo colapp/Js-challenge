@@ -18,11 +18,73 @@
             transform: translateX(-50%);
         }
     </style>
+    <style>
+        .a {
+            width: 200px;
+            height: 200px;
+            background: rebeccapurple;
+        }
+        .b {
+            width: 100px;
+            height: 100px;
+            background: dodgerblue;
+            margin-left: 200px;
+        }
+        .c {
+            width: 50px;
+            height: 50px;
+            background: yellowgreen;
+            margin-left: 100px;
+        }
+    </style>
 </head>
 <body>
-<input type="button" class="btn js-btn" value="点我" />
+<!--html行内写法-->
+<!--<input type="button" class="btn js-btn" value="点我" onclick="alert('好饿饿饿啊啊啊啊')"/>-->
+<!--<input type="button" class="btn js-btn" value="点我" />-->
+
+<div class="a">
+    <div class="b">
+        <div class="c"></div>
+    </div>
+</div>
+
 <script>
     let btn = document.getElementsByClassName("btn")[0];
+
+
+    let a = document.getElementsByClassName("a")[0];
+    let b = document.getElementsByClassName("b")[0];
+    let c = document.getElementsByClassName("c")[0];
+
+    // a.onclick = function() {
+    //     console.log("爷爷不说话")
+    // };
+    // b.onclick = function () {
+    //     console.log("爸爸不说话")
+    // };
+    // c.onclick = function () {
+    //     console.log("儿子不说话")
+    // };
+
+    a.addEventListener("click",function () {
+        console.log("爷爷不说话")
+    });
+    b.addEventListener("click",function () {
+        console.log("爸爸不说话")
+    });
+    c.addEventListener("click",function () {
+        console.log("儿子不说话")
+    });
+    a.addEventListener("click",function () {
+        console.log("爷爷不说话")
+    },true);
+    b.addEventListener("click",function () {
+        console.log("爸爸不说话")
+    },true);
+    c.addEventListener("click",function () {
+        console.log("儿子不说话")
+    },true)
 
     //DOM1级
 
@@ -36,29 +98,12 @@
     // });
 
     // 取消默认事件
-    document.oncontextmenu = function (e) {
-    //     alert("click")
-        console.log(e);
-        e.preventDefault();
-    };
-
-
-    // var handler = function(event){
-    //     switch(event.type){
-    //     case "click":
-    //         alert("Clicked");
-    //         break;
-    //     case "mouseover":
-    //         event.target.style.backgroundColor = "red";
-    //         break;
-    //     case "mouseout":
-    //         event.target.style.backgroundColor = "";
-    //         break;
-    //     }
+    // document.oncontextmenu = function (e) {
+    //     alert("click");
+    //     console.log(e);
+    //     e.preventDefault();
     // };
-    // btn.onclick = handler;
-    // btn.onmouseover = handler;
-    // btn.onmouseout = handler;
+
 
 </script>
 </body>
